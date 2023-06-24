@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "3866173599",
+    "project_id": "therealgroceryapp-e657b",
+    "storage_bucket": "therealgroceryapp-e657b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3866173599:android:288cc33fcadad308fd82aa",
+        "android_client_info": {
+          "package_name": "com.example.mygrocerymobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3866173599-tg3oc25sb1qbghn95frdhi0n1oqvjtse.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5nI-24x00zIST_iBrvJQoVkP8WoO0mMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3866173599-tg3oc25sb1qbghn95frdhi0n1oqvjtse.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
