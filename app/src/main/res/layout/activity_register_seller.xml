@@ -131,7 +131,7 @@
                                 android:layout_marginEnd="12dp"
                                 android:layout_marginTop="10dp">
                                 <EditText
-                                    android:id="@+id/reUserCountry"
+                                    android:id="@+id/reSellerCountry"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawablePadding="5dp"

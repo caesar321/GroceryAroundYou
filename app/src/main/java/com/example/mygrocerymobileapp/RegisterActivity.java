@@ -51,8 +51,7 @@ public class RegisterActivity extends AppCompatActivity implements LocationListe
     private ImageView UserImage,reGps;
     private EditText reUserName,rePhone,reCountry,reState,reCity,reEmail,rePassword,reConPassword;
     private Button btnReSignUp;
-    private TextView registerSeller;
-    FirebaseAuth auth;
+   private  FirebaseAuth auth;
     DatabaseReference databaseReference;
     private static final int LOCATION_REQUEST_CODE = 100;
     private static final int CAMERA_REQUEST_CODE = 200;
@@ -78,6 +77,7 @@ public class RegisterActivity extends AppCompatActivity implements LocationListe
         reCountry= findViewById(R.id.reUserCountry);
         reState = findViewById(R.id.reUserState);
         auth= FirebaseAuth.getInstance();
+       // registerSeller = findViewById(R.id.registerseller);
         progress= new ProgressDialog(this);
         databaseReference = FirebaseDatabase.getInstance().getReference("Users");
         reCity = findViewById(R.id.reUserCity);
@@ -85,11 +85,17 @@ public class RegisterActivity extends AppCompatActivity implements LocationListe
         rePassword = findViewById(R.id.reUserPassword);
         reConPassword = findViewById(R.id.reUserConPassword);
         btnReSignUp = findViewById(R.id.btnUserSignUp);
-        registerSeller= findViewById(R.id.registerSAseller);
+        TextView registerSeller = findViewById(R.id.registerseller);
         locationPermission = new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION};
         cameraPermission = new String[]{android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermission = new String[]{android.Manifest.permission.WRITE_EXTERNAL_STORAGE};
-
+        registerSeller.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this,RegisterSellerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         reGps.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,10 +180,11 @@ public class RegisterActivity extends AppCompatActivity implements LocationListe
             hashMap.put("state",""+ reState.getText().toString());
             hashMap.put("city",""+ reCity.getText().toString());
             hashMap.put("latitude",""+ latitude);
+            hashMap.put("longitude",""+ longititude);
             hashMap.put("timestamp",""+ timeStamp);
             hashMap.put("Account","buyer");
             hashMap.put("online","true");
-            hashMap.put("Userimage","");
+            hashMap.put("Userimage",R.drawable.user);
             databaseReference.child(uid).setValue(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void unused) {
