@@ -1,2 +1,2 @@
 # GroceryAroundYou
-A mobile app that enables one to buy and also sell groceries
+A mobile app that enables one to buy and also sell groceries online
