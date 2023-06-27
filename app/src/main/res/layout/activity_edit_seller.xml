@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/grocerybackground"
-    tools:context=".RegisterSellerActivity">
+    tools:context=".RegisterActivity">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,26 +28,26 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Grocery- Register"
-                      android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
                         android:textStyle="bold"
+                        android:layout_centerHorizontal="true"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         android:layout_marginTop="4dp"/>
+
                     <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/SellerImgEdit"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_centerInParent="true"
-                        android:src="@drawable/user"
-                        android:layout_marginTop="12dp"
-                        android:id="@+id/reSellerImg"
                         android:scaleType="centerCrop"
-                        app:riv_oval="true"/>
+                        android:src="@drawable/user"
+                        app:riv_oval="true" />
                 </RelativeLayout>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-             android:background="@drawable/radiuscard"
-                    android:layout_marginTop="3dp"
+                    android:background="@drawable/radiuscard"
                     app:cardElevation="7dp"
                     app:cardCornerRadius="12dp"
                     android:elevation="10dp">
@@ -62,9 +62,9 @@
                             android:layout_marginStart="12dp"
                             android:layout_marginEnd="12dp"
                             android:background="@drawable/backgroundloginedittext"
-                            android:layout_marginTop="20dp">
+                            android:layout_marginTop="12dp">
                             <EditText
-                                android:id="@+id/reSellerName"
+                                android:id="@+id/SellerNameEdit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawablePadding="5dp"
@@ -82,7 +82,7 @@
                             android:background="@drawable/backgroundloginedittext"
                             android:layout_marginTop="20dp">
                             <EditText
-                                android:id="@+id/reSellerShop"
+                                android:id="@+id/BusinessEdit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawablePadding="5dp"
@@ -91,6 +91,7 @@
                                 android:textStyle="bold"
                                 android:hint="Business Name"
                                 android:inputType="text" />
+
                         </com.google.android.material.textfield.TextInputLayout>
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
@@ -100,7 +101,7 @@
                             android:background="@drawable/backgroundloginedittext"
                             android:layout_marginTop="20dp">
                             <EditText
-                                android:id="@+id/rSellerPhone"
+                                android:id="@+id/SellerPhoneEdit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawablePadding="5dp"
@@ -110,16 +111,29 @@
                                 android:hint="Phone Number"
                                 android:inputType="number" />
 
-
                         </com.google.android.material.textfield.TextInputLayout>
-                        <ImageView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:src="@drawable/ic_baseline_add_location_24"
-                            android:layout_marginEnd="12dp"
                             android:layout_marginTop="12dp"
-                            android:id="@+id/gpsSeller"/>
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginStart="12dp"
+                                android:text="Click Icon to generate Location"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:src="@drawable/ic_baseline_add_location_24"
+                                android:layout_marginEnd="12dp"
+                                android:id="@+id/gpsSellerEdit"/>
+                        </LinearLayout>
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -132,7 +146,7 @@
                                 android:layout_marginEnd="12dp"
                                 android:layout_marginTop="10dp">
                                 <EditText
-                                    android:id="@+id/reSellerCountry"
+                                    android:id="@+id/SellerCountryEdit"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawablePadding="5dp"
@@ -152,7 +166,7 @@
                                 android:layout_marginEnd="12dp"
                                 android:layout_marginTop="10dp">
                                 <EditText
-                                    android:id="@+id/reSellerState"
+                                    android:id="@+id/SellerStateEdit"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawablePadding="5dp"
@@ -172,7 +186,7 @@
                                 android:layout_marginStart="12dp"
                                 android:layout_marginTop="10dp">
                                 <EditText
-                                    android:id="@+id/reSellerCity"
+                                    android:id="@+id/SellerCityEdit"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawablePadding="5dp"
@@ -193,7 +207,7 @@
                             android:background="@drawable/backgroundloginedittext"
                             android:layout_marginTop="12dp">
                             <EditText
-                                android:id="@+id/reSellerEmail"
+                                android:id="@+id/SellerEmailEdit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawablePadding="5dp"
@@ -212,7 +226,7 @@
                             android:background="@drawable/backgroundloginedittext"
                             android:layout_marginTop="20dp">
                             <EditText
-                                android:id="@+id/reSellerPassword"
+                                android:id="@+id/SellerPasswordEdit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawablePadding="5dp"
@@ -231,7 +245,7 @@
                             android:background="@drawable/backgroundloginedittext"
                             android:layout_marginTop="20dp">
                             <EditText
-                                android:id="@+id/reSellerConPassword"
+                                android:id="@+id/SellerConPasswordEdit"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:drawablePadding="5dp"
@@ -244,10 +258,10 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="SignUp"
+                            android:text="Update"
                             android:layout_marginTop="12dp"
-                            android:id="@+id/btnSellerSignUp"
                             android:textColor="@color/white"
+                            android:id="@+id/btnSellerEdit"
                             android:backgroundTint="@color/black"
                             android:layout_gravity="center"/>
 

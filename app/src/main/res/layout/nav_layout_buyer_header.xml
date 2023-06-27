@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/user"
+        android:id="@+id/nav_img_buyer"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"/>
+
+    <TextView
+        android:id="@+id/nav_txt_name_buyer"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Caesar FatherNature"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_below="@id/nav_img_buyer"/>
+
+
+
+</RelativeLayout>

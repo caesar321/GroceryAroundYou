@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                                 progressDialog.setMessage("Checking...");
                                 for (DataSnapshot ds:snapshot.getChildren()){
                                     String TypeOfAccount=""+ds.child("Account").getValue();
-                                    if (TypeOfAccount.equals("Seller")){
+                                    if (TypeOfAccount.equals("seller")){
                                         progressDialog.dismiss();
                                         Intent intent= new Intent(LoginActivity.this,SellerActivity.class);
                                         startActivity(intent);
